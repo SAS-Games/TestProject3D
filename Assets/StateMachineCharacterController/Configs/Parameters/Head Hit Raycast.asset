@@ -9,19 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7755a86a7d06cb242a2c520fa349e5aa, type: 3}
-  m_Name: Key List
+  m_Script: {fileID: 11500000, guid: d2f3b015e0a72964ea952c95d04c6d6a, type: 3}
+  m_Name: Head Hit Raycast
   m_EditorClassIdentifier: 
-  values:
-  - Vertical Pull
-  - Idle
-  - Move
-  - Ascending
-  - TurnSmoothTime
-  - Walk Speed
-  - Descending
-  - Slide Speed
-  - Run Speed
-  - NormalizedSpeed
-  - VerticalSpeed
-  - Landed
+  m_GroundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  m_Direction: {x: 0, y: 1, z: 0}
+  m_HitDistanceOffset: 0.05
+  m_Radius: 0.3
+  m_MaxRayCount: 3

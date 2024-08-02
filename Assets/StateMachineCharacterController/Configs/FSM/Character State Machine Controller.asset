@@ -1,0 +1,885 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8774465175282514065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ed43b1bea1e69d49a73ea66f6732994, type: 3}
+  m_Name: Base StateMachine
+  m_EditorClassIdentifier: 
+  m_Position: {x: 300, y: 50, z: 0}
+  m_PositionAsUpNode: {x: 700, y: 100, z: 0}
+  m_AnyStatePosition: {x: 528, y: 224, z: 0}
+  m_ParentStateMachine: {fileID: 0}
+  m_ChildStateMachines: []
+  m_StateModels:
+  - {fileID: -5011031136293539259}
+  - {fileID: 4779021494368802184}
+  - {fileID: 6161165161771437119}
+  - {fileID: -2417932154789913839}
+  - {fileID: 7275593808399711167}
+  - {fileID: 208710938254881962}
+  - {fileID: 4428503328789864365}
+  - {fileID: -3591567628902438062}
+--- !u!114 &-8675553897558622702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Jump Ascending->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 4779021494368802184}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Custom
+    m_Mode: 1
+    m_Type: 10
+    m_FloatValue: 0
+    m_CustomCondition: SAS.StateMachineCharacterController.HeadHitDetector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &-7468593881369856501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Any State
+  m_EditorClassIdentifier: 
+  m_Position: {x: 528, y: 224, z: 0}
+  m_Tag: 
+  m_StateActions: []
+  m_Transitions: []
+--- !u!114 &-7141370306009794065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Run Jump Ascending->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -3591567628902438062}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 1
+  m_ExitTime: 0.4
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions: []
+--- !u!114 &-6212155931384674795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Jump Ascending->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 4779021494368802184}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 1
+  m_ExitTime: 0.3
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions: []
+--- !u!114 &-5011031136293539259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+  m_Position: {x: 913, y: 564, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.StopMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.VerticalPull, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Vertical Pull
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.GroundDetector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.AnimatorMoveSpeed, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: NormalizedSpeed
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Move
+    whenToExecute: 1
+  m_Transitions:
+  - {fileID: -2394418024853180435}
+  - {fileID: 7425570206771586740}
+  - {fileID: -15253092589551698}
+  - {fileID: -4393539914761691270}
+--- !u!114 &-4506461600140153625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Run Jump Ascending->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -3591567628902438062}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Jump
+    m_Mode: 2
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+--- !u!114 &-4393539914761691270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Idle->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -5011031136293539259}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: IsGrounded
+    m_Mode: 2
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+--- !u!114 &-4220850607052441554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Walk->To->Jump Ascending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 6161165161771437119}
+  m_TargetState: {fileID: 4779021494368802184}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: IsGrounded
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+  - m_Name: Jump
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+--- !u!114 &-3591567628902438062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Run Jump Ascending
+  m_EditorClassIdentifier: 
+  m_Position: {x: 1291, y: 289, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.AerialMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.UpwardMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 5
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyRotation, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: TurnSmoothTime
+    whenToExecute: 4
+  - fullName: SAS.StateMachineGraph.Utilities.ApplyAnimatorParameter, AssemblyStateMachine,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Ascending
+    whenToExecute: 1
+  - fullName: SAS.StateMachineCharacterController.AnimatorVerticalSpeed, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: VerticalSpeed
+    whenToExecute: 4
+  m_Transitions:
+  - {fileID: -4506461600140153625}
+  - {fileID: -2158932330817183632}
+  - {fileID: -7141370306009794065}
+--- !u!114 &-3123744322089653527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Walk->To->Idle
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 6161165161771437119}
+  m_TargetState: {fileID: -5011031136293539259}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: NormalizedMoveInput
+    m_Mode: 4
+    m_Type: 1
+    m_FloatValue: 0.05
+    m_CustomCondition: 
+--- !u!114 &-2417932154789913839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Jump Descending
+  m_EditorClassIdentifier: 
+  m_Position: {x: 1292, y: 561, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.AerialMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineGraph.Utilities.ApplyActorParameter, AssemblyStateMachine,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Descending
+    whenToExecute: 1
+  - fullName: SAS.StateMachineCharacterController.DownwardMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 5
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.GroundDetector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineGraph.Utilities.ApplyAnimatorParameter, AssemblyStateMachine,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Landed
+    whenToExecute: 16
+  - fullName: SAS.StateMachineCharacterController.AnimatorVerticalSpeed, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: VerticalSpeed
+    whenToExecute: 4
+  m_Transitions:
+  - {fileID: 9100765072238430746}
+--- !u!114 &-2394418024853180435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Idle->To->Slide
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -5011031136293539259}
+  m_TargetState: {fileID: 208710938254881962}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Custom
+    m_Mode: 1
+    m_Type: 10
+    m_FloatValue: 0
+    m_CustomCondition: SAS.StateMachineCharacterController.IsSlidingSlope, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &-2158932330817183632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Run Jump Ascending->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -3591567628902438062}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Custom
+    m_Mode: 1
+    m_Type: 10
+    m_FloatValue: 0
+    m_CustomCondition: SAS.StateMachineCharacterController.HeadHitDetector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &-1232321496627534543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Run->To->Slide
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 4428503328789864365}
+  m_TargetState: {fileID: 208710938254881962}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Custom
+    m_Mode: 1
+    m_Type: 10
+    m_FloatValue: 0
+    m_CustomCondition: SAS.StateMachineCharacterController.IsSlidingSlope, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &-760572999800965520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Jump Ascending->To->Jump Descending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 4779021494368802184}
+  m_TargetState: {fileID: -2417932154789913839}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Jump
+    m_Mode: 2
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+--- !u!114 &-15253092589551698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Idle->To->Jump Ascending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -5011031136293539259}
+  m_TargetState: {fileID: 4779021494368802184}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: IsGrounded
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+  - m_Name: Jump
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1523b8ee4bacc64cb19ba28d47e9317, type: 3}
+  m_Name: Character State Machine Controller
+  m_EditorClassIdentifier: 
+  m_BaseStateMachineModel: {fileID: -8774465175282514065}
+  _parameters:
+  - m_Name: Jump
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+  - m_Name: IsGrounded
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+  - m_Name: NormalizedMoveInput
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+  m_DefaultStateModel: {fileID: -5011031136293539259}
+  m_AnyStateModel: {fileID: -7468593881369856501}
+--- !u!114 &208710938254881962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Slide
+  m_EditorClassIdentifier: 
+  m_Position: {x: 540, y: 569, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.Slide, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Slide Speed
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.StopMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.VerticalPull, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Vertical Pull
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyRotation, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: TurnSmoothTime
+    whenToExecute: 4
+  m_Transitions:
+  - {fileID: 2824215724990775342}
+--- !u!114 &2811276761008655741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Walk->To->Slide
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 6161165161771437119}
+  m_TargetState: {fileID: 208710938254881962}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Custom
+    m_Mode: 1
+    m_Type: 10
+    m_FloatValue: 0
+    m_CustomCondition: SAS.StateMachineCharacterController.IsSlidingSlope, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &2824215724990775342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Slide->To->Idle
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 208710938254881962}
+  m_TargetState: {fileID: -5011031136293539259}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: Custom
+    m_Mode: 2
+    m_Type: 10
+    m_FloatValue: 0
+    m_CustomCondition: SAS.StateMachineCharacterController.IsSlidingSlope, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &3853620396000616686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Walk->To->Run
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 6161165161771437119}
+  m_TargetState: {fileID: 4428503328789864365}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: NormalizedMoveInput
+    m_Mode: 3
+    m_Type: 1
+    m_FloatValue: 0.6
+    m_CustomCondition: 
+--- !u!114 &4428503328789864365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Run
+  m_EditorClassIdentifier: 
+  m_Position: {x: 913, y: 287, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.HorizontalMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Run Speed
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.VerticalPull, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Vertical Pull
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyRotation, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: TurnSmoothTime
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.GroundDetector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.AnimatorMoveSpeed, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: NormalizedSpeed
+    whenToExecute: 4
+  m_Transitions:
+  - {fileID: -1232321496627534543}
+  - {fileID: 7414387287576540661}
+  - {fileID: 4587680979176119655}
+--- !u!114 &4587680979176119655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Run->To->Run Jump Ascending
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 4428503328789864365}
+  m_TargetState: {fileID: -3591567628902438062}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: IsGrounded
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+  - m_Name: Jump
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 
+--- !u!114 &4779021494368802184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Walk Jump Ascending
+  m_EditorClassIdentifier: 
+  m_Position: {x: 1141, y: 388, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.AerialMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.UpwardMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 5
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyRotation, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: TurnSmoothTime
+    whenToExecute: 4
+  - fullName: SAS.StateMachineGraph.Utilities.ApplyAnimatorParameter, AssemblyStateMachine,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Ascending
+    whenToExecute: 1
+  - fullName: SAS.StateMachineCharacterController.AnimatorVerticalSpeed, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: VerticalSpeed
+    whenToExecute: 4
+  m_Transitions:
+  - {fileID: -760572999800965520}
+  - {fileID: -8675553897558622702}
+  - {fileID: -6212155931384674795}
+--- !u!114 &6161165161771437119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Walk
+  m_EditorClassIdentifier: 
+  m_Position: {x: 913, y: 388, z: 0}
+  m_Tag: 
+  m_StateActions:
+  - fullName: SAS.StateMachineCharacterController.HorizontalMovement, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Walk Speed
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.VerticalPull, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: Vertical Pull
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyMovementVector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.ApplyRotation, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: TurnSmoothTime
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.GroundDetector, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: 
+    whenToExecute: 4
+  - fullName: SAS.StateMachineCharacterController.AnimatorMoveSpeed, AssemblyStateMachineCharacterController,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    tag: 0
+    key: NormalizedSpeed
+    whenToExecute: 4
+  m_Transitions:
+  - {fileID: 2811276761008655741}
+  - {fileID: -3123744322089653527}
+  - {fileID: -4220850607052441554}
+  - {fileID: 3853620396000616686}
+--- !u!114 &7275593808399711167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7557f759ffd418e4bab479f7b35953ed, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: 
+  m_Position: {x: 1127, y: 146, z: 0}
+  m_Tag: 
+  m_StateActions: []
+  m_Transitions: []
+--- !u!114 &7414387287576540661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Run->To->Walk
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: 4428503328789864365}
+  m_TargetState: {fileID: 6161165161771437119}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: NormalizedMoveInput
+    m_Mode: 4
+    m_Type: 1
+    m_FloatValue: 0.6
+    m_CustomCondition: 
+--- !u!114 &7425570206771586740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Idle->To->Walk
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -5011031136293539259}
+  m_TargetState: {fileID: 6161165161771437119}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: NormalizedMoveInput
+    m_Mode: 3
+    m_Type: 1
+    m_FloatValue: 0.05
+    m_CustomCondition: 
+--- !u!114 &9100765072238430746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f0dc7669bda5a4eb7472cb2dc10cb7, type: 3}
+  m_Name: Jump Descending->To->Idle
+  m_EditorClassIdentifier: 
+  m_SourceState: {fileID: -2417932154789913839}
+  m_TargetState: {fileID: -5011031136293539259}
+  m_HasExitTime: 0
+  m_ExitTime: 0
+  m_WaitForAwaitableActionsToComplete: 1
+  m_Conditions:
+  - m_Name: IsGrounded
+    m_Mode: 1
+    m_Type: 4
+    m_FloatValue: 0
+    m_CustomCondition: 

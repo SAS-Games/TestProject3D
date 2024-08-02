@@ -9,9 +9,9 @@ AnimatorController:
   m_Name: EllenAnimatorController
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: HorizontalSpeed
+  - m_Name: NormalizedSpeed
     m_Type: 1
-    m_DefaultFloat: 0
+    m_DefaultFloat: 0.1
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
@@ -64,7 +64,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: HorizontalSpeed
     m_Mirror: 0
-  m_BlendParameter: HorizontalSpeed
+  m_BlendParameter: NormalizedSpeed
   m_BlendParameterY: VerticalSpeed
   m_MinThreshold: 0
   m_MaxThreshold: 0.85
@@ -152,7 +152,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400010, guid: 9d703e84815204b499c34db7f9ec5cd9, type: 3}
-    m_Threshold: 0.18
+    m_Threshold: 0.4
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -166,7 +166,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: HorizontalSpeed
     m_Mirror: 0
-  m_BlendParameter: HorizontalSpeed
+  m_BlendParameter: NormalizedSpeed
   m_BlendParameterY: Blend
   m_MinThreshold: 0
   m_MaxThreshold: 0.85
@@ -369,7 +369,7 @@ AnimatorState:
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
-  m_TimeParameter: HorizontalSpeed
+  m_TimeParameter: NormalizedSpeed
 --- !u!1107 &1107356859972195512
 AnimatorStateMachine:
   serializedVersion: 6
@@ -382,7 +382,7 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107529634923670332}
-    m_Position: {x: 444, y: 120, z: 0}
+    m_Position: {x: 440, y: 120, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107442941378297976}
     m_Position: {x: 276, y: -48, z: 0}
