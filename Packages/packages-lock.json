@@ -28,6 +28,14 @@
       },
       "hash": "544f708a150bd024682bc1bc81858e81206732a6"
     },
+    "com.sas.tweenmanagement": {
+      "version": "file:SASPackages-Tween",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.sas.utilities": "1.0.0"
+      }
+    },
     "com.sas.utilities": {
       "version": "https://github.com/SAS-Games/SASPackages-Utilities.git",
       "depth": 0,

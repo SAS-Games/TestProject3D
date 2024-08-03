@@ -45,21 +45,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b7de2610c17b64da84904fa14d13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {x: 0, y: 3, z: 0}
+  m_Waypoints:
   - {x: 0, y: 0, z: 0}
-  handleRadius: 0.5
-  snappingSettings: {x: 0.1, y: 0.1}
-  gizmoDeselectedColor: {r: 0, g: 0, b: 1, a: 1}
-  editing: 0
-  pathType: 0
-  m_BehaviorType: 0
-  m_FollowType: 1
+  - {x: 0, y: 3, z: 0}
+  - {x: 3, y: 3, z: 0}
+  m_BehaviorType: 1
+  m_EaseType: 0
   m_Speed: 2
-  m_MaxDistanceToGoal: 0.1
   m_MoveTowardsPath: 1
   m_Platform: {fileID: 280997028077382675}
   m_LocalSpace: 1
+  m_Tick: 0
 --- !u!1 &6698975791395870339
 GameObject:
   m_ObjectHideFlags: 0
