@@ -2266,6 +2266,7 @@ GameObject:
   - component: {fileID: 4327945848893347967}
   - component: {fileID: 324645186482340396}
   - component: {fileID: 2934972222027647755}
+  - component: {fileID: 2759043028928308898}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2313,7 +2314,7 @@ CharacterController:
   m_SlopeLimit: 50
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
-  m_MinMoveDistance: 0.005
+  m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!114 &5642171450750192893
 MonoBehaviour:
@@ -2395,6 +2396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 558a6404320dea84f846f4e10f80f4ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_OnControllerColliderHitMessage: 
+  m_CollisionTags: []
 --- !u!114 &4327945848893347967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2450,6 +2453,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.8, z: 1}
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &2759043028928308898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640901729515321829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d80a95d3922e141a4bdab9b45c9b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollisionTags:
+  - Pushable
+  m_ForceMagnitude: 5
+  pushAction: {fileID: -2540170507359172811, guid: dc4bc928449ea1647b14289621970e3e, type: 3}
 --- !u!1 &5810386580275414761
 GameObject:
   m_ObjectHideFlags: 0

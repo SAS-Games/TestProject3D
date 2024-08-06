@@ -65,6 +65,15 @@ namespace SAS.StateMachineCharacterController
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Push"",
+                    ""type"": ""Button"",
+                    ""id"": ""76634d2a-9c2b-47cb-b40e-aa3d3a6f2360"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -254,6 +263,28 @@ namespace SAS.StateMachineCharacterController
                     ""action"": ""Run"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5df826dc-4663-4a42-805e-4606d0de8e1f"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Push"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40cc0ce0-5005-4c16-8b7f-67e5fd55cf19"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Push"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -278,6 +309,7 @@ namespace SAS.StateMachineCharacterController
             m_PlayerControls_Jump = m_PlayerControls.FindAction("Jump", throwIfNotFound: true);
             m_PlayerControls_Attack = m_PlayerControls.FindAction("Attack", throwIfNotFound: true);
             m_PlayerControls_Run = m_PlayerControls.FindAction("Run", throwIfNotFound: true);
+            m_PlayerControls_Push = m_PlayerControls.FindAction("Push", throwIfNotFound: true);
         }
 
         ~@PlayerActions()
@@ -348,6 +380,7 @@ namespace SAS.StateMachineCharacterController
         private readonly InputAction m_PlayerControls_Jump;
         private readonly InputAction m_PlayerControls_Attack;
         private readonly InputAction m_PlayerControls_Run;
+        private readonly InputAction m_PlayerControls_Push;
         public struct PlayerControlsActions
         {
             private @PlayerActions m_Wrapper;
@@ -356,6 +389,7 @@ namespace SAS.StateMachineCharacterController
             public InputAction @Jump => m_Wrapper.m_PlayerControls_Jump;
             public InputAction @Attack => m_Wrapper.m_PlayerControls_Attack;
             public InputAction @Run => m_Wrapper.m_PlayerControls_Run;
+            public InputAction @Push => m_Wrapper.m_PlayerControls_Push;
             public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -377,6 +411,9 @@ namespace SAS.StateMachineCharacterController
                 @Run.started += instance.OnRun;
                 @Run.performed += instance.OnRun;
                 @Run.canceled += instance.OnRun;
+                @Push.started += instance.OnPush;
+                @Push.performed += instance.OnPush;
+                @Push.canceled += instance.OnPush;
             }
 
             private void UnregisterCallbacks(IPlayerControlsActions instance)
@@ -393,6 +430,9 @@ namespace SAS.StateMachineCharacterController
                 @Run.started -= instance.OnRun;
                 @Run.performed -= instance.OnRun;
                 @Run.canceled -= instance.OnRun;
+                @Push.started -= instance.OnPush;
+                @Push.performed -= instance.OnPush;
+                @Push.canceled -= instance.OnPush;
             }
 
             public void RemoveCallbacks(IPlayerControlsActions instance)
@@ -425,6 +465,7 @@ namespace SAS.StateMachineCharacterController
             void OnJump(InputAction.CallbackContext context);
             void OnAttack(InputAction.CallbackContext context);
             void OnRun(InputAction.CallbackContext context);
+            void OnPush(InputAction.CallbackContext context);
         }
     }
 }
