@@ -11,7 +11,8 @@
                     "id": "ccfa3621-9b1b-4ddb-a507-720d9dc87b94",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MouseControlCamera",
@@ -19,7 +20,8 @@
                     "id": "e376f921-fb2d-4257-827f-1309ec9171ea",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -30,6 +32,17 @@
                     "interactions": "",
                     "processors": "ScaleVector2(x=2,y=2)",
                     "groups": "keyboard control scheme",
+                    "action": "RotateCamera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "470c3063-8242-4602-a181-3e7f3b5daafc",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "RotateCamera",
                     "isComposite": false,
                     "isPartOfComposite": false

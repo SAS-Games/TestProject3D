@@ -61,6 +61,17 @@ public partial class @CameraLookControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""470c3063-8242-4602-a181-3e7f3b5daafc"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RotateCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""8693aacf-2825-4c9c-a9d3-b2ecf6670489"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",

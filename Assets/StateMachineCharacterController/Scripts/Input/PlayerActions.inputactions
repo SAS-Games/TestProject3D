@@ -18,7 +18,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "88cb33ca-f91f-4c18-b6a8-4b67016e26af",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -36,7 +36,7 @@
                     "name": "Run",
                     "type": "Button",
                     "id": "f64df0e7-b1a4-4e8e-baa6-b51e6130b0dc",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -155,11 +155,33 @@
                 },
                 {
                     "name": "",
+                    "id": "d1c078b9-abc5-4119-8235-b39d84da7c0d",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5474b06d-9be8-48e3-a88a-f77faf418e7a",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Control Scheme",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b996e372-6a3f-4738-8cfc-2bd7830c6793",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -193,6 +215,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard Control Scheme",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1401a616-06d3-4465-b6d0-c8c87ef75f23",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
