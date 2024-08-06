@@ -17,20 +17,6 @@ public class AdvancedCharacterPushObject : CharacterPushObject
 
     protected override bool ShouldPushObject(ControllerColliderHit hit)
     {
-        return IsTriggerPressed() && IsMovingTowardObject(hit);
-    }
-
-    private bool IsTriggerPressed()
-    {
         return pushAction.action.IsPressed();
-    }
-
-    private bool IsMovingTowardObject(ControllerColliderHit hit)
-    {
-        return true;
-        var playerMovementDirection = _characterController.velocity.normalized;
-        var objectDirection = (hit.transform.position - transform.position).normalized;
-
-        return Vector3.Dot(playerMovementDirection, objectDirection) > 0.5f; // Adjust threshold as needed
     }
 }
