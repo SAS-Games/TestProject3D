@@ -10,6 +10,7 @@ public class OnTriggerHandler : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (string.IsNullOrEmpty(m_OnEnterMessage))
             return;
 
@@ -23,7 +24,6 @@ public class OnTriggerHandler : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.name);
         if (string.IsNullOrEmpty(m_OnExitMessage))
             return;
 
