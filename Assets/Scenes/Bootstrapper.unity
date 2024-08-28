@@ -132,19 +132,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2995104060214822055, guid: bd7ce5984626c3d4786ad9c7452b4e6f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2995104060214822055, guid: bd7ce5984626c3d4786ad9c7452b4e6f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2995104060214822055, guid: bd7ce5984626c3d4786ad9c7452b4e6f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 375
       objectReference: {fileID: 0}
     - target: {fileID: 2995104060214822055, guid: bd7ce5984626c3d4786ad9c7452b4e6f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 7016907492029386284, guid: bd7ce5984626c3d4786ad9c7452b4e6f, type: 3}
       propertyPath: m_Pivot.x
