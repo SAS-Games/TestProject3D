@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-Locales
   m_GUID: 1fd425e7171874145a37bbb0e5ecb89a
   m_SerializeEntries:
+  - m_GUID: 0ceb01c8e9434a5439c02730b5577a8a
+    m_Address: Japanese (ja)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9547a16ab17f36644b3ea1c20337e254
     m_Address: Spanish (es)
     m_ReadOnly: 1
