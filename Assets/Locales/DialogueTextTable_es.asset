@@ -20,24 +20,25 @@ MonoBehaviour:
   m_TableData:
   - m_Id: 28839886848
     m_Localized: "\xA1Bienvenido al tutorial de localizaci\xF3n de Unity! En esta
-      gu\xEDa interactiva, aprender\xE1s los conceptos b\xE1sicos de la localizaci\xF3n,
-      incluyendo c\xF3mo configurar tu proyecto y traducir textos a diferentes idiomas."
+      gu\xEDa interactiva, aprender\xE1 los conceptos b\xE1sicos de la localizaci\xF3n,
+      incluida la configuraci\xF3n de su proyecto y la traducci\xF3n de texto para
+      diferentes idiomas."
     m_Metadata:
       m_Items: []
   - m_Id: 55444336656384
-    m_Localized: Elige un tema para comenzar.
+    m_Localized: Elija un tema para comenzar
     m_Metadata:
       m_Items: []
   - m_Id: 62613178138624
     m_Localized: "La localizaci\xF3n es el proceso de adaptar tu juego a diferentes
       regiones, culturas e idiomas. Esto implica traducir texto, ajustar formatos
-      de fecha, adaptar gr\xE1ficos y, a veces, incluso cambiar elementos de la jugabilidad
-      para adecuarse mejor al p\xFAblico objetivo."
+      de fecha, adaptar gr\xE1ficos y, a veces, incluso cambiar elementos del juego
+      para adaptarse mejor al p\xFAblico objetivo."
     m_Metadata:
       m_Items: []
   - m_Id: 63122723160064
-    m_Localized: "La localizaci\xF3n es crucial para alcanzar a una audiencia global
-      y garantizar que tu juego sea accesible para jugadores de diversos or\xEDgenes."
+    m_Localized: "La localizaci\xF3n es crucial para llegar a una audiencia global
+      y garantizar que su juego sea accesible para jugadores de diversos or\xEDgenes."
     m_Metadata:
       m_Items: []
   - m_Id: 64416405897216
@@ -45,51 +46,68 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65486339293184
-    m_Localized: "1. **Instala el paquete de localizaci\xF3n**: Ve al Administrador
-      de paquetes de Unity e instala el paquete oficial de localizaci\xF3n de Unity."
+    m_Localized: "1. **Instale el paquete de localizaci\xF3n**: vaya al Administrador
+      de paquetes de Unity e instale el paquete de localizaci\xF3n oficial de Unity."
     m_Metadata:
       m_Items: []
   - m_Id: 65845447213056
-    m_Localized: "2. **Crea un asset de configuraci\xF3n de localizaci\xF3n**: Este
-      asset almacenar\xE1 todas tus configuraciones de localizaci\xF3n, incluyendo
-      los idiomas soportados y el idioma predeterminado."
+    m_Localized: "2. **Cree un recurso de configuraci\xF3n de localizaci\xF3n**:
+      este recurso almacenar\xE1 todas sus configuraciones de localizaci\xF3n, incluidos
+      los idiomas admitidos y el idioma predeterminado."
     m_Metadata:
       m_Items: []
   - m_Id: 65864397078528
-    m_Localized: '3. **Configura las Locales**: Las Locales representan los diferentes
-      idiomas y culturas que soporta tu juego. Crea una nueva Locale para cada idioma.'
+    m_Localized: "3. **Configurar configuraciones regionales**: Las configuraciones
+      regionales representan los diferentes idiomas y culturas que admite tu juego.
+      Cree una nueva configuraci\xF3n regional para cada idioma."
     m_Metadata:
       m_Items: []
   - m_Id: 65882776518656
-    m_Localized: "4. Crea tablas de cadenas: Las tablas de cadenas almacenan todo
-      el texto que necesita ser traducido. Cada idioma tendr\xE1 su propia tabla
-      de cadenas."
+    m_Localized: "4. **Crear tablas de cadenas**: Las tablas de cadenas almacenan
+      todo el texto que debe traducirse. Cada idioma tendr\xE1 su propia tabla de
+      cadenas."
     m_Metadata:
       m_Items: []
   - m_Id: 67066513965056
-    m_Localized: "La traducci\xF3n de texto es una parte clave de la localizaci\xF3n.
-      En Unity, utilizas tablas de cadenas para almacenar traducciones para diferentes
-      idiomas."
+    m_Localized: "Traducir texto es una parte clave de la localizaci\xF3n. En Unity,
+      usas tablas de cadenas para almacenar traducciones para diferentes idiomas."
     m_Metadata:
       m_Items: []
   - m_Id: 67085241532416
-    m_Localized: "1. **Agregar entradas a las tablas de cadenas**: Cada entrada en
-      una tabla de cadenas representa un fragmento de texto que necesita ser traducido.
-      Por ejemplo, la tabla de cadenas en ingl\xE9s podr\xEDa tener una entrada para
-      \"Start Game,\" y la tabla en espa\xF1ol tendr\xEDa \"Iniciar Juego.\"\n"
+    m_Localized: " 1. **Agregar entradas a tablas de cadenas**: cada entrada en una
+      tabla de cadenas representa un fragmento de texto que debe traducirse. Por
+      ejemplo, la tabla de cadenas en ingl\xE9s podr\xEDa tener una entrada para
+      \"Iniciar juego\" y la tabla en espa\xF1ol tendr\xEDa \"Iniciar juego\"."
     m_Metadata:
       m_Items: []
   - m_Id: 67130460323840
-    m_Localized: "2. **Usar el componente de localizaci\xF3n**: Adjunta el componente
-      Localize String Event a elementos de la interfaz de usuario como campos de
-      texto o botones. Este componente mostrar\xE1 autom\xE1ticamente la traducci\xF3n
-      correcta seg\xFAn la localidad seleccionada."
+    m_Localized: "2. **Utilice el componente Localizar**: adjunte el componente Localizar
+      evento de cadena a elementos de la interfaz de usuario, como campos de texto
+      o botones. Este componente mostrar\xE1 autom\xE1ticamente la traducci\xF3n
+      correcta seg\xFAn la configuraci\xF3n regional seleccionada."
     m_Metadata:
       m_Items: []
   - m_Id: 67138970566656
-    m_Localized: "3. **Vista previa de traducciones**: En las Configuraciones de
-      Localizaci\xF3n, puedes cambiar entre diferentes localidades para ver c\xF3mo
-      se ve el texto traducido en tu juego."
+    m_Localized: "3. **Vista previa de traducciones**: en la configuraci\xF3n de
+      localizaci\xF3n, puedes cambiar entre diferentes configuraciones regionales
+      para obtener una vista previa de c\xF3mo se ver\xE1 el texto traducido en tu
+      juego."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85083448786944
+    m_Localized: "\xBFQu\xE9 es la localizaci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85200465674240
+    m_Localized: "Configurar la localizaci\xF3n en Unity"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85311618924544
+    m_Localized: Traducir texto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85770295427072
+    m_Localized: Hecho
     m_Metadata:
       m_Items: []
   references:
